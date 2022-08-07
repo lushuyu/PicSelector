@@ -1,0 +1,31 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.0"
+    defaultConfig {
+        applicationId "com.lushuyu.PicSelector"
+        minSdkVersion 15
+        targetSdkVersion 29
+        versionCode 1
+        versionName "天动万象 - V1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'androidx.appcompat:appcompat:1.0.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.github.QuadFlask:colorpicker:0.0.13'
+    implementation 'com.github.donkingliang:ImageSelector:2.2.1'
+}
